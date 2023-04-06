@@ -1,0 +1,167 @@
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.bg-effect {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-effect img {
+  width: 100%;
+}
+
+.bg-effect.one {
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.bg-effect.two {
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1100px;
+  height: 100vh;
+}
+
+.timer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.105rem;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 1.25rem;
+}
+
+.timer > p {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 2.875rem;
+  font-size: 0.875rem;
+}
+
+.timer .btn {
+  background-color: var(--purple);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 160px;
+  transition: background-color 0.2s;
+}
+
+.timer .btn:hover {
+  background-color: #5851d1;
+}
+
+.counter {
+  width: 100%;
+}
+
+.count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#days, 
+#hours,
+#minutes,
+#seconds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+}
+
+#days p, 
+#hours p,
+#minutes p,
+#seconds p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--light-grey);
+}
+
+#days span,
+#hours span,
+#minutes span,
+#seconds span,
+.separator {
+  font-size: 4.5rem;
+  color: var(--black);
+}
+
+
+.rocket {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.rocket img {
+  width: 100%;
+}
+
+
+
+
+@media (max-width: 930px) {
+  #days span,
+  #hours span,
+  #minutes span,
+  #seconds span,
+  .separator {
+    font-size: 2.5rem;
+    color: var(--black);
+  }
+
+  #days p, 
+  #hours p,
+  #minutes p,
+  #seconds p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .rocket {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .timer h1 {
+    font-size: 1.5rem;
+  }
+
+  .timer > p {
+    font-size: 0.75rem;
+  }
+
+  .timer .btn {
+    font-size: 0.825rem;
+  }
+}
